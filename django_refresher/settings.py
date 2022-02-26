@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-&6+kcb@2#6tjlzhpo$^^b@ngyf%c3wu2=fa$it95%k*!@+1_x3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://shoemakerapi.herokuapp.com/', '127.0.0.1']
 
 STRIPE_SECRET_KEY = 'sk_test_51KX1CpEGJfFBlQrlQvhqGxupGUhoPQEeYmLnl1upw7YMEDxOGg4b7HqGobK7AbXt4QAaWvqIhFpENvHm5LGalHJY00pNQlVSvq'
 
