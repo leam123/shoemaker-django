@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
+    "https://shoemakerapp.herokuapp.com/",
     "http://127.0.0.1:8080",
 ]
 
