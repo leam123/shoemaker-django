@@ -38,21 +38,30 @@ class Product(models.Model):
     
     def get_image(self):
         if self.image:
-            print(self.image.url)
-            return 'https://shoemakerapi.herokuapp.com' + self.image.url
+            url = 'https://shoemakerapi.herokuapp.com' + self.image.url
+            image_url = url.replace('media', 'static')
+
+            return image_url
+            # return 'https://shoemakerapi.herokuapp.com' + self.image.url
         return ''
     
     def get_thumbnail(self):
         if self.thumbnail:
-            print(self.thumbnail.url)
-            return 'https://shoemakerapi.herokuapp.com' + self.thumbnail.url
+            url = 'https://shoemakerapi.herokuapp.com' + self.thumbnail.url
+            thumbnail_url = url.replace('media', 'static')
+
+            return thumbnail_url
+            # return 'https://shoemakerapi.herokuapp.com' + self.thumbnail.url
         else:
             if self.image:
                 self.thumbnail = self.make_thumbnail(self.image)
                 self.save()
 
-                print(self.thumbnail.url)
-                return 'https://shoemakerapi.herokuapp.com' + self.thumbnail.url
+                url = 'https://shoemakerapi.herokuapp.com' + self.thumbnail.url
+                thumbnail_url = url.replace('media', 'static')
+
+                return thumbnail_url
+                # return 'https://shoemakerapi.herokuapp.com' + self.thumbnail.url
             else:
                 return ''
     
