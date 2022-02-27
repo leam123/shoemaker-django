@@ -11,4 +11,4 @@ urlpatterns = [
     path('shoemaker/', include('djoser.urls.authtoken')),
     path('shoemaker/', include('product.urls')),
     path('shoemaker/', include('order.urls')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
