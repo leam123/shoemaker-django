@@ -151,7 +151,8 @@ USE_TZ = True
 # STATIC_URL = '/static/'
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
-STATIC_URL = 'https://shoemakerapi.herokuapp.com/'
+# STATIC_URL = 'https://shoemakerapi.herokuapp.com/'
+STATIC_URL = '/static/'
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
