@@ -22,8 +22,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-&6+kcb@2#6tjlzhpo$^^b@ngyf%c3wu2=fa$it95%k*!@+1_x3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = False
-DEBUG = True
+DEBUG = False
+# DEBUG = True
 
 ALLOWED_HOSTS = [
     'shoemakerapi.herokuapp.com/',
@@ -146,8 +146,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-STATIC_ROOT = BASE_DIR / 'staticfiles/'
-STATIC_URL = '/static/'
+# STATIC_ROOT = BASE_DIR / 'staticfiles/'
+# STATIC_URL = '/static/'
+
+STATIC_URL = 'https://shoemakerapi.herokuapp.com/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media/'
 
